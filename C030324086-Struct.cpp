@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 
 using namespace std;
 
@@ -12,15 +13,24 @@ struct Mahasiswa
 
 int main(int argc, char const *argv[])
 {
-    Mahasiswa farish;
-    farish.nim = "C030324086";
-    farish.nama = "Farish";
-    farish.alamat = "Banjarmasin";
-    farish.ipk = 4.01;
+    Mahasiswa Farish;
+    Mahasiswa *ptrFarish = &Farish;
 
-    cout << "Nama: " << farish.nama << endl;
-    cout << "Alamat: " << farish.alamat << endl;
-    cout << "NIM: " << farish.nim << endl;
-    cout << "IPK: " << farish.ipk << endl;
+    cout << "Masukkan NIM: ";
+    cin >> ptrFarish->nim;
+    system("cls");
+    cout << "Masukkan Nama: ";
+    cin >> ptrFarish->nama;
+    system("cls");
+    cout << "Masukkan Alamat: ";
+    cin >> ptrFarish->alamat;
+    system("cls");
+    cout << "Masukkan ipk: ";
+    cin >> ptrFarish->ipk;
+    system("cls");
+    cout << "NIM: " << ptrFarish->nim << endl;
+    cout << "Nama: " << ptrFarish->nama << endl;
+    cout << "Alamat: " << ptrFarish->alamat << endl;
+    cout << "IPK: " << ptrFarish->ipk << endl;
     return 0;
 }
