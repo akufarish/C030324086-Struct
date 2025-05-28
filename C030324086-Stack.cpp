@@ -17,7 +17,6 @@ int Full(Stack *S);
 int Empty(Stack *S);
 void Pop(Stack *S, itemType *x);
 void Push(Stack *S, itemType x);
-void display(Stack *S);
 
 
 int main(int argc, char const *argv[])
@@ -48,15 +47,6 @@ void Pop(Stack *S, itemType *x) {
         *x = S->Item[S->Count];
     }
     
-}
-
-void Push(Stack *S, itemType x) {
-    if (S->Count == MAXSTACK) {
-        cout << "Stack sudah penuh" << endl;
-    } else {
-        S->Item[S->Count] = x;
-        ++(S->Count);
-    }
 }
 
 void Push(Stack *S, itemType x) {
