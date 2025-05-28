@@ -24,3 +24,7 @@ int main(int argc, char const *argv[])
     
     return 0;
 }
+
+void InitializeStack(Stack *S) {
+    S->Count = 0;
+}
