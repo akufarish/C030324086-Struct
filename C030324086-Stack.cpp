@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
     Push(&S, 5);
     Push(&S, 9);
     Push(&S, 1);
-    Push(&S, 3);
+    Push(&S, 3); 
     Pop(&S, &x);
     display(&S);
     
@@ -50,7 +50,7 @@ int Empty(Stack *S) {
 }
 
 void Pop(Stack *S, itemType *x) {
-    if (S->Count == 0)
+    if (Empty(S))
     {
         cout << "Stack masih kosong" << endl;
     } else {
@@ -61,7 +61,7 @@ void Pop(Stack *S, itemType *x) {
 }
 
 void Push(Stack *S, itemType x) {
-    if (S->Count == MAXSTACK) {
+    if (Full(S)) {
         cout << "Stack sudah penuh" << endl;
     } else {
         S->Item[S->Count] = x;
